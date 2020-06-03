@@ -22,7 +22,6 @@ RSpec.describe BrewCommands do
       expected_command_args = [
         "brew",
         "livecheck",
-        "--all",
         "--quiet",
         "--newer-only",
         "--full-name",

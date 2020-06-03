@@ -1,6 +1,7 @@
 # BrewBump
-TODO: Explain repo
+
+Automated version bump for Homebrew formulae.
 
 ## Usage
 
-TODO: Write usage instructions here
+`brew bump` runs as a scheduled cron task to bump all outdated Livecheck formulae.

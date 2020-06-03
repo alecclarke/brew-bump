@@ -21,8 +21,6 @@ module BrewCommands
     command_args = [
       "brew",
       "livecheck",
-      # "--all",
-      "erlang",
       "--quiet",
       "--newer-only",
       "--full-name",

@@ -1,0 +1,22 @@
+name: Brew bump
+
+on:
+#   schedule:
+#     - cron: '*/30 * * * *'
+  push:
+    branches: master
+
+jobs:
+  brew-bump:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Add command to PATH
+      run: echo "::add-path::./bin"
+    - name: Install dependencies
+      run: brew update && brew tap homebrew/livecheck
+    - name: Homebrew version
+      run: brew --version
+    - name: Run brew bump
+      run: HOMEBREW_LIVECHECK_WATCHLIST=.brew_livecheck_watchlist brew bump     
